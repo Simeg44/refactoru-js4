@@ -14,7 +14,7 @@
 .people {
 	text-align: right;
 	padding: 10px;
-	margin-right: 13em;
+	margin-right: 35%;
 }
 
 .people ul {
@@ -33,4 +33,31 @@
 	border-radius: 5px;
 	margin-top: 25px;
 }
+
+.more-ppl {
+	display: none;
+	width: 70%;
+	margin: auto;
+	margin-top: 70px;
 }
+
+.more-ppl h3 {
+	text-align: center;
+}
+
+.more-ppl-alt {
+	width: 60%;
+	margin: auto;
+	text-align: center;
+}
+
+#more {
+	margin-right: 10px;
+}
+
+.entry-change {
+	display: none;
+}
+
+
+
