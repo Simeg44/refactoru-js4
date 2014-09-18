@@ -88,6 +88,7 @@ $(document).on('ready', function() {
 		build(volunteers);
 
 		$('.output').show();
+		// $('.matching').show();
 	});
 
 	$('.entry-change').on('click', 'button', function(e) {
@@ -98,20 +99,31 @@ $(document).on('ready', function() {
 		$('.entry-change').hide();
 		$('.people').find('h2').fadeToggle(0);
 	});
+
+	$('#search-btn').on('click', function() {
+		var person = $(this).closest('.output').find('.pin').val();
+		var position = victims.names.indexOf(person);
+		$('.matched').empty();
+
+
+	if (position === -1) {
+		$('.matched').append('<p>This person is not in the database</p>');
+	}
+	else {
+		var match = [];
+
+		for (i=0; i < volunteers.total; i++) {
+			if (volunteers.street[i] === victims.street[position]) {
+				match.push(volunteers.names[i]);
+			}
+		}
+
+		$('.matched').append("<p>Available Volunteers:</p>");
+		$('.matched').append(match.join(", ")).show();
+		console.log(match);
+	}
+
+	});
+
 })
 
-
-// $(document).ready(function() {
-// 	$(".btn").click(function() {
-// 		console.log('working');
-	
-// 	})
-	
-// })
-/*var name = $(this).closest(".people").find("#name").val();
-		victims.names.push(name);
-		// victims.number.push.val($("#phoneNum"));
-		// victims.street.push.val($("#street"));
-		victims.total++;
-
-		console.log(victims.names);*/
