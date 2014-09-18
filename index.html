@@ -12,7 +12,7 @@
 			<h1>Victims and Volunteers Database</h1>
 		</div>
 
-		<div class="people">
+		<div class="people" id="victims">
 			<!-- <form class="num">
 				<label for="numPeople"></label>
 				<input type="number" id="numPeople">
@@ -20,8 +20,10 @@
 					<input class="btn" type="submit">
 				</div>
 			</form> -->
+			<h2>Victims:</h2>
+			<h2 class="volunteer-title">Volunteers:</h2>
 			<form>
-				<ul>
+				<ul class="ul-style">
 					<li>
 						<div class="entry">
 							<label for="name">Name:</label>
@@ -47,9 +49,9 @@
 			</form>
 		</div>
 
-		<div class="entry-change">
+		<div class="entry-change more-ppl-alt">
 			<h3>Please Enter Volunteers</h3>
-			<button id="okay">Next</button>
+			<button>Next</button>
 		</div>
 
 		<div class="more-ppl">
@@ -61,6 +63,18 @@
 				</div>
 			</form>
 		</div>
+	</div>
+
+	<div class="output">
+		<ul id="output-list" class="ul-style">
+			<!-- <li>Names:
+				<ul id="names-out"></ul>
+			</li>
+			<li>Numbers:
+				<ul class="streets-out"></ul>
+			</li>
+			<li>Streets:</li> -->
+		</ul>
 	</div>
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
